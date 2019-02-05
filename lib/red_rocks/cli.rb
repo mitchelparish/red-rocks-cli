@@ -3,21 +3,24 @@ require 'colorize'
 class RedRocks::CLI
 
   def call
-    puts ""
-    puts "Welcome to Red Rocks Amphitheater!!".red
     list_concerts
+    menu
   end
 
   def list_concerts
     puts ""
+    puts "Welcome to Red Rocks Amphitheatre!!".red
+    puts ""
     puts "Please select a concert below:"
     puts ""
-    puts "Concert 1"
-    puts "Concert 2"
-    puts "Concert 3"
+    puts "1. Concert_name1"
+    puts "2. Concert_name2"
+    puts "3. Concert_name3"
     puts ""
-    puts "Please enter the concert number you wish to see:"
   end
 
+  def menu
+    puts "Please enter the concert number you wish to see:"
+  end
 
 end
