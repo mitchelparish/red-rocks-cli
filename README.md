@@ -42,4 +42,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the Red::Rocks::Cli project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/'mitchelparish'/red-rocks-cli/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the red-rocks-cli project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/'mitchelparish'/red-rocks-cli/blob/master/CODE_OF_CONDUCT.md).
