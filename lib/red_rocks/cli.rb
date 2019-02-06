@@ -16,6 +16,7 @@ class RedRocks::CLI
     puts "  ////                                          \\\\\\\\".red
     puts " /// Welcome to Red Rocks Park and Amphitheatre!! \\\\\\".red
     puts "////                                              \\\\\\\\".red
+    puts ""
 
     concerts = RedRocks::Concert.all
     concerts.each.with_index(1) {|concert, index| puts "#{index}. #{concert.name}"}
@@ -24,8 +25,9 @@ class RedRocks::CLI
   def menu
     input = nil
 
-    while input != exit
-      puts "Please select the concert number you wish to see. To bounce, type exit."
+    while input != "exit"
+      puts ""
+      puts "Please select the concert number you wish to see. To bounce, type exit.".red
       input = gets.strip
 
       if input.to_i>0
