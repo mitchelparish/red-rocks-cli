@@ -37,7 +37,8 @@ class RedRocks::CLI
           puts "Please select the concert number you wish to see."
         else
           puts ""
-          puts "//////Red Rocks Park & Amphitheatre is Proud to Present:\\\\\\\\\\\\".red
+          puts "///////////////////////////////////////////////////////////////////////////"
+          puts "Red Rocks Park & Amphitheatre is Proud to Present:".red 
           puts ""
           puts "#{concert_choice.name}"
           puts "#{concert_choice.opener}"
@@ -45,8 +46,7 @@ class RedRocks::CLI
           puts "For tickets and more information, please visit:"
           puts "#{concert_choice.tickets_URL}"
           puts ""
-          puts "/////////////////////////////////////////////////////////////".red
-          puts ""
+          puts "///////////////////////////////////////////////////////////////////////////"
         end
       else
         puts "Please try again."
