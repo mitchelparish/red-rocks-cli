@@ -20,4 +20,4 @@ class RedRocks::Scraper
   end
 end
 
-Scraper.scrape #remove before submission.
+# Scraper.scrape #remove before submission.

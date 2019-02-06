@@ -4,7 +4,7 @@ require 'pry' #remove before submission
 class RedRocks::CLI
 
   def call
-    #RedRocks::Scraper.scrape
+    RedRocks::Scraper.scrape
     list_concerts
     menu
     goodbye
@@ -29,7 +29,7 @@ class RedRocks::CLI
 
       if input.to_i>0
         concert_choice = RedRocks::Concert.find_by_index(input.to_i - 1)
-        if concert_choice = nil
+        if concert_choice == nil
           puts "Be groovy or type exit to leave, man."
           puts "Please select the concert number you wish to see."
         else
