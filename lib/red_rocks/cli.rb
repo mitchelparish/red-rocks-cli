@@ -38,12 +38,12 @@ class RedRocks::CLI
         else
           puts ""
           puts "///////////////////////////////////////////////////////////////////////////"
-          puts "Red Rocks Park & Amphitheatre is Proud to Present:".red 
+          puts "Red Rocks Park & Amphitheatre is Proud to Present:".red
           puts ""
-          puts "#{concert_choice.name}"
+          puts "#{concert_choice.name}".bold
           puts "#{concert_choice.opener}"
           puts "On #{concert_choice.date} at #{concert_choice.time}"
-          puts "For tickets and more information, please visit:"
+          puts "For tickets and more information, please visit:".cyan
           puts "#{concert_choice.tickets_URL}"
           puts ""
           puts "///////////////////////////////////////////////////////////////////////////"
