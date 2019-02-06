@@ -36,8 +36,8 @@ class RedRocks::CLI
           puts "Be groovy or type exit to leave, man."
           puts "Please select the concert number you wish to see."
         else
-          puts "/////////////////////////////////////////////////////////////".red
-          puts "Red Rocks Park & Amphitheatre is Proud to Present:"
+          puts ""
+          puts "//////Red Rocks Park & Amphitheatre is Proud to Present:\\\\\\\\\\\\".red
           puts ""
           puts "#{concert_choice.name}"
           puts "#{concert_choice.opener}"
