@@ -12,6 +12,7 @@ class RedRocks::CLI
   end
 
   def list_concerts
+    puts ""
     puts "  ////                                          \\\\\\\\".red
     puts " /// Welcome to Red Rocks Park and Amphitheatre!! \\\\\\".red
     puts "////                                              \\\\\\\\".red
