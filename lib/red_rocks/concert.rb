@@ -5,12 +5,11 @@ class RedRocks::Concert
 
   @@all = []
 
-  def initialize(name, opener, date, time, doors, tickets_URL)
+  def initialize(name, opener, date, time, tickets_URL)
     @name = name
     @opener = opener
     @date = date
     @time = time
-    @doors = doors
     @tickets_URL = tickets_URL
     @@all << self
     #separate save method?
