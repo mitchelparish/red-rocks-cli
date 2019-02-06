@@ -1,4 +1,5 @@
 require 'colorize'
+require 'pry' #remove before submission
 
 class RedRocks::CLI
 
@@ -10,10 +11,10 @@ class RedRocks::CLI
 
   end
 
-  def list_concerts
-    puts ""
-    puts "// Welcome to Red Rocks Park and Amphitheatre!! //".red
-    puts ""
+    def list_concerts
+    puts "  ////                                          \\\\\\\\".red
+    puts " /// Welcome to Red Rocks Park and Amphitheatre!! \\\\\\".red
+    puts "////                                              \\\\\\\\".red
     #list all instances of the Concert class with corresponding number
   end
 
