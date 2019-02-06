@@ -1,7 +1,7 @@
 require 'pry'
 
 class RedRocks::Concert
-  attr_accessor :name, :opener, :date, :time, :doors, :tickets_URL
+  attr_accessor :name, :opener, :date, :time, :tickets_URL
 
   @@all = []
 
@@ -22,5 +22,5 @@ class RedRocks::Concert
 
   def self.find_by_index(index)
     @@all[index]
-  end 
+  end
 end
