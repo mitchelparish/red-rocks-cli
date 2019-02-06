@@ -13,7 +13,9 @@ class Scraper
     doc.css("div.entry.event-icons.clearfix").each do |concert|
       name = concert.css("h3").text
       opener = concert.css("h4").text
-      date = 
+      date = concert.css("span.m-date-value.m-value").text
+      doors = concert.css("span.m-doors").text.gsub("Doors","").strip
+      tickets_URL = concert.css("")
 
 
       # RedRocks::Concert.new(name, opener, date, time, doors, tickets_URL)
