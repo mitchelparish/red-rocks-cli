@@ -14,11 +14,11 @@ class Scraper
       name = concert.css("h3").text
       opener = concert.css("h4").text
       date = concert.css("span.m-date-value.m-value").text
-      doors = concert.css("span.m-doors").text.gsub("Doors","").strip
-      tickets_URL = concert.css("")
+      time = concert.css("span.m-doors").text.gsub("Doors","").strip
+      tickets_URL = concert.css("div.buttons a").map { |link| link['href'] }
 
 
-      # RedRocks::Concert.new(name, opener, date, time, doors, tickets_URL)
+      # RedRocks::Concert.new(name, opener, date, time, tickets_URL)
     end
 
 
