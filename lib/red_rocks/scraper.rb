@@ -1,6 +1,6 @@
 require 'pry'
-# require 'nokogiri'
-# require 'open-uri'
+require 'nokogiri'
+require 'open-uri'
 
 # class RedRocks::Scraper
 class Scraper
@@ -13,9 +13,15 @@ class Scraper
     doc.css("div.entry.event-icons.clearfix").each do |concert|
       name = concert.css("h3").text
       opener = concert.css("h4").text
+      date = 
 
-      
+
       # RedRocks::Concert.new(name, opener, date, time, doors, tickets_URL)
     end
+
+
+
   end
 end
+
+Scraper.scrape_concerts
