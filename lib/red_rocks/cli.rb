@@ -40,10 +40,10 @@ class RedRocks::CLI
           puts "Red Rocks Park & Amphitheatre is Proud to Present:"
           puts ""
           puts "#{concert_choice.name}"
-          puts "Featuring #{concert_choice.opener}"
+          puts "#{concert_choice.opener}"
           puts "On #{concert_choice.date} at #{concert_choice.time}"
           puts "For tickets and more information, please visit:"
-          puts "#{tickets_URL}"
+          puts "#{concert_choice.tickets_URL}"
           puts ""
           puts "/////////////////////////////////////////////////////////////".red
           puts ""
