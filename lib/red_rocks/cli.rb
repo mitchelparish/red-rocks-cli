@@ -3,7 +3,7 @@ require 'colorize'
 class RedRocks::CLI
 
   def call
-    #RedRocks::Scraper.scrape_concerts
+    #RedRocks::Scraper.scrape
     list_concerts
     menu
     goodbye
@@ -41,4 +41,4 @@ class RedRocks::CLI
   def goodbye
     puts "Rock on!"
   end
-end 
+end

@@ -5,7 +5,7 @@ require 'open-uri'
 # class RedRocks::Scraper
 class Scraper
 
-  def self.scrape_concerts
+  def self.scrape
     doc = Nokogiri::HTML(open("https://www.redrocksonline.com/events/category/Concerts"))
 
     binding.pry
@@ -16,14 +16,9 @@ class Scraper
       date = concert.css("span.m-date-value.m-value").text
       time = concert.css("span.m-doors").text.gsub("Doors","").strip
       tickets_URL = concert.css("div.buttons a").attr("href").text
-
-
       # RedRocks::Concert.new(name, opener, date, time, tickets_URL)
     end
-
-
-
   end
 end
 
-Scraper.scrape_concerts
+Scraper.scrape
