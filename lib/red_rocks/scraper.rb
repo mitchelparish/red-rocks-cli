@@ -14,8 +14,8 @@ class Scraper
       date = concert.css("span.m-date-value.m-value").text
       time = concert.css("span.m-doors").text.gsub("Doors","").strip
       tickets_URL = concert.css("div.buttons a").attr("href").text
-      # RedRocks::Concert.new(name, opener, date, time, tickets_URL)
-      #binding.pry #remove before submission. 
+      #RedRocks::Concert.new(name, opener, date, time, tickets_URL)
+      #binding.pry #remove before submission.
     end
   end
 end
