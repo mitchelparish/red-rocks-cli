@@ -15,7 +15,9 @@ class RedRocks::CLI
     puts "  ////                                          \\\\\\\\".red
     puts " /// Welcome to Red Rocks Park and Amphitheatre!! \\\\\\".red
     puts "////                                              \\\\\\\\".red
-    #list all instances of the Concert class with corresponding number
+
+    concerts = RedRocks::Concert.all
+    concerts.each.with_index(1) {|concert, index| puts "#{index}. #{concert.name}"}
   end
 
   def menu
