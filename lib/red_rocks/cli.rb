@@ -41,7 +41,7 @@ class RedRocks::CLI
     # input = nil
     # while input != "exit"
       puts ""
-      puts "Please select the concert number you wish to see. To bounce, type exit.".red
+      puts "Please select the concert number you wish to see. To bounce, type exit.".red.bold 
       input = gets.strip
 
       if input.to_i>0
@@ -61,9 +61,11 @@ class RedRocks::CLI
         puts "#{concert_choice.tickets_URL}"
         puts ""
         puts "///////////////////////////////////////////////////////////////////////////"
+        menu
       elsif
         input == "exit"
-        puts "See ya out THERE!"
+        puts ""
+        puts "See ya out there!!".bold
       else
         puts "Please try again."
       end
