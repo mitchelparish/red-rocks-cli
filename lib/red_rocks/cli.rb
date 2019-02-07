@@ -25,9 +25,11 @@ class RedRocks::CLI
   def list_concerts
     input = gets.strip
     if input == "list"
-      puts "" 
+      puts ""
       concerts = RedRocks::Concert.all
       concerts.each.with_index(1) {|concert, index| puts "#{index}. #{concert.name}"}
+    elsif input == "exit"
+      goodbye
     else
       puts ""
       puts "Be groovy or type exit to leave, man.".bold
@@ -69,6 +71,7 @@ class RedRocks::CLI
   end
 
   def goodbye
-    puts "See ya out there!!"
+    puts "See ya out there!!".bold 
+    exit
   end
 end
