@@ -8,6 +8,7 @@ class RedRocks::CLI
     welcome
     list_concerts
     menu
+    goodbye
   end
 
   def welcome
@@ -17,33 +18,37 @@ class RedRocks::CLI
     puts " /// Welcome to Red Rocks Park and Amphitheatre!! \\\\\\".red
     puts "////                                              \\\\\\\\".red
     puts ""
-    puts "To see a current list of concerts, type list.".bold
+    puts "To see a current list of concerts, type list."
     puts "To bounce, type exit."
   end
 
   def list_concerts
     input = gets.strip
     if input == "list"
-      puts ""
       concerts = RedRocks::Concert.all
       concerts.each.with_index(1) {|concert, index| puts "#{index}. #{concert.name}"}
-    elsif input == "exit"
-      goodbye
     else
       puts ""
       puts "Be groovy or type exit to leave, man.".bold
       puts "To see a current list of concerts, type list."
+      list_concerts 
     end
   end
 
   def menu
     input = nil
 
-    puts ""
-    puts "Please select the concert number you wish to see.".red
-    input = gets.strip
+    while input != "exit"
+      puts ""
+      puts "Please select the concert number you wish to see. To bounce, type exit.".red
+      input = gets.strip
+
       if input.to_i>0
         concert_choice = RedRocks::Concert.find_by_index(input.to_i - 1)
+        if concert_choice == nil
+          puts "Be groovy or type exit to leave, man."
+          puts "Please select the concert number you wish to see."
+        else
           puts ""
           puts "///////////////////////////////////////////////////////////////////////////"
           puts "Red Rocks Park & Amphitheatre is Proud to Present:".red
@@ -55,19 +60,14 @@ class RedRocks::CLI
           puts "#{concert_choice.tickets_URL}"
           puts ""
           puts "///////////////////////////////////////////////////////////////////////////"
-          puts ""
-          puts "Would you like to view another conert? Enter Y or N".bold
-
-          input = gets.strip.downcase
-          if input == "y"
-            list_concerts
-          elsif input == "n"
-            puts ""
-            puts " See ya out there!"
-            exit
-          else
-            puts "Sorry, not sure what you mean."
-            menu 
-          end
         end
+      else
+        puts "Please try again."
       end
+    end
+  end
+
+  def goodbye
+    puts "See ya out there!!"
+  end
+end
