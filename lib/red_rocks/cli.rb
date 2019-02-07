@@ -70,6 +70,9 @@ class RedRocks::CLI
   end
 
   def goodbye
-    puts "See ya out there!!"
+    puts ""
+    puts "See ya out there!!".bold
+    puts ""
+    exit
   end
 end
