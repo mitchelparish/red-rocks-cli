@@ -1,4 +1,4 @@
-# Red Rocks Amphitheater Data Gem
+# Red Rocks Amphitheatre Data Gem
 
 This gem provides the user with a Command Line Interface to access concert information for Red Rocks Park & Amphitheater in Morrison, Colorado.
 
