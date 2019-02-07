@@ -13,25 +13,26 @@ class RedRocks::CLI
 
   def welcome
     puts ""
-    puts "   //                                            \\\\".red
-    puts "  ////                                          \\\\\\\\".red
-    puts " /// Welcome to Red Rocks Park and Amphitheatre!! \\\\\\".red
-    puts "////                                              \\\\\\\\".red
+    puts "   //                                            \\\\".red.bold
+    puts "  ////                                          \\\\\\\\".red.bold
+    puts " /// Welcome to Red Rocks Park and Amphitheatre!! \\\\\\".red.bold
+    puts "////                                              \\\\\\\\".red.bold
     puts ""
-    puts "To see a current list of concerts, type list."
+    puts "To see a current list of concerts, type list.".bold
     puts "To bounce, type exit."
   end
 
   def list_concerts
     input = gets.strip
     if input == "list"
+      puts "" 
       concerts = RedRocks::Concert.all
       concerts.each.with_index(1) {|concert, index| puts "#{index}. #{concert.name}"}
     else
       puts ""
       puts "Be groovy or type exit to leave, man.".bold
       puts "To see a current list of concerts, type list."
-      list_concerts 
+      list_concerts
     end
   end
 
