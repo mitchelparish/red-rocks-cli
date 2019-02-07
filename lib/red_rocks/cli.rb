@@ -8,7 +8,6 @@ class RedRocks::CLI
     welcome
     list_concerts
     menu
-    goodbye
   end
 
   def welcome
