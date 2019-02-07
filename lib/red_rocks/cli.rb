@@ -18,17 +18,31 @@ class RedRocks::CLI
     puts " /// Welcome to Red Rocks Park and Amphitheatre!! \\\\\\".red
     puts "////                                              \\\\\\\\".red
     puts ""
+    puts "To see a current list of concerts, type list.".bold
+    puts "To bounce, type exit."
 
-    concerts = RedRocks::Concert.all
-    concerts.each.with_index(1) {|concert, index| puts "#{index}. #{concert.name}"}
+    input = gets.strip
+    if input == "list"
+      concerts = RedRocks::Concert.all
+      concerts.each.with_index(1) {|concert, index| puts "#{index}. #{concert.name}"}
+    elsif input == "exit"
+      goodbye
+    else
+      puts ""
+      puts "Be groovy or type exit to leave, man.".bold
+      puts "To see a current list of concerts, type list."
+      #look into way to clear visual input in terminal
+    end
   end
 
   def menu
+
+
     input = nil
 
     while input != "exit"
       puts ""
-      puts "Please select the concert number you wish to see. To bounce, type exit.".red
+      puts "Please select the concert number you wish to see.".red
       input = gets.strip
 
       if input.to_i>0
