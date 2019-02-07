@@ -56,6 +56,6 @@ class RedRocks::CLI
   end
 
   def goodbye
-    puts "Rock on!"
+    puts "See ya out there!!"
   end
 end
