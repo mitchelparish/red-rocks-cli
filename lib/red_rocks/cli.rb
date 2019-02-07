@@ -5,13 +5,13 @@ class RedRocks::CLI
 
   def call
     RedRocks::Scraper.scrape
+    welcome
     list_concerts
     menu
     goodbye
-
   end
 
-  def list_concerts
+  def welcome
     puts ""
     puts "   //                                            \\\\".red
     puts "  ////                                          \\\\\\\\".red
@@ -20,9 +20,12 @@ class RedRocks::CLI
     puts ""
     puts "To see a current list of concerts, type list.".bold
     puts "To bounce, type exit."
+  end
 
+  def list_concerts
     input = gets.strip
     if input == "list"
+      puts ""
       concerts = RedRocks::Concert.all
       concerts.each.with_index(1) {|concert, index| puts "#{index}. #{concert.name}"}
     elsif input == "exit"
@@ -31,26 +34,21 @@ class RedRocks::CLI
       puts ""
       puts "Be groovy or type exit to leave, man.".bold
       puts "To see a current list of concerts, type list."
-      #look into way to clear visual input in terminal
     end
   end
 
   def menu
-
-
     input = nil
 
-    while input != "exit"
-      puts ""
-      puts "Please select the concert number you wish to see.".red
-      input = gets.strip
-
+    puts ""
+    puts "Please select the concert number you wish to see.".red
+    input = gets.strip
       if input.to_i>0
         concert_choice = RedRocks::Concert.find_by_index(input.to_i - 1)
-        if concert_choice == nil
-          puts "Be groovy or type exit to leave, man."
-          puts "Please select the concert number you wish to see."
-        else
+        # if concert_choice == nil
+        #   # puts "Be groovy or type exit to leave, man."
+        #   # puts "Please select the concert number you wish to see."
+        # else
           puts ""
           puts "///////////////////////////////////////////////////////////////////////////"
           puts "Red Rocks Park & Amphitheatre is Proud to Present:".red
@@ -62,17 +60,16 @@ class RedRocks::CLI
           puts "#{concert_choice.tickets_URL}"
           puts ""
           puts "///////////////////////////////////////////////////////////////////////////"
-        end
       else
         puts "Please try again."
       end
+
     end
-  end
+
 
   def goodbye
     puts ""
     puts "See ya out there!!".bold
     puts ""
-    exit
   end
 end
