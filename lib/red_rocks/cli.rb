@@ -56,17 +56,18 @@ class RedRocks::CLI
           puts ""
           puts "///////////////////////////////////////////////////////////////////////////"
           puts ""
-          puts "To see the list again, type list. To bounce, type exit".bold 
+          puts "Would you like to view another conert? Enter Y or N".bold
 
-      else
-        puts "Please try again."
+          input = gets.strip.downcase
+          if input == "y"
+            list_concerts
+          elsif input == "n"
+            puts ""
+            puts " See ya out there!"
+            exit
+          else
+            puts "Sorry, not sure what you mean."
+            menu 
+          end
+        end
       end
-    end
-
-
-  def goodbye
-    puts ""
-    puts "See ya out there!!".bold
-    puts ""
-  end
-end
