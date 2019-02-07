@@ -29,7 +29,7 @@ class RedRocks::CLI
       concerts = RedRocks::Concert.all
       concerts.each.with_index(1) {|concert, index| puts "#{index}. #{concert.name}"}
     elsif input == "exit"
-      goodbye
+      exit
     else
       puts ""
       puts "Be groovy or type exit to leave, man.".bold
@@ -62,18 +62,17 @@ class RedRocks::CLI
         puts "#{concert_choice.tickets_URL}"
         puts ""
         puts "///////////////////////////////////////////////////////////////////////////"
-        end
-      elsif 
+      elsif
         input == "exit"
-        goodbye
+        puts "See ya out THERE!"
       else
         puts "Please try again."
       end
     end
   end
 
-  def goodbye
-    puts "See ya out there!!".bold 
-    exit
-  end
-end
+#
+#   def goodbye
+#     puts "See ya out there!!".bold
+#   end
+# end
