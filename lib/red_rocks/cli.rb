@@ -40,7 +40,6 @@ class RedRocks::CLI
 
   def menu
     input = nil
-
     while input != "exit"
       puts ""
       puts "Please select the concert number you wish to see. To bounce, type exit.".red
@@ -48,22 +47,24 @@ class RedRocks::CLI
 
       if input.to_i>0
         concert_choice = RedRocks::Concert.find_by_index(input.to_i - 1)
-        if concert_choice == nil
-          puts "Be groovy or type exit to leave, man."
-          puts "Please select the concert number you wish to see."
-        else
-          puts ""
-          puts "///////////////////////////////////////////////////////////////////////////"
-          puts "Red Rocks Park & Amphitheatre is Proud to Present:".red
-          puts ""
-          puts "#{concert_choice.name}".bold
-          puts "#{concert_choice.opener}"
-          puts "On #{concert_choice.date} at #{concert_choice.time}"
-          puts "For tickets and more information, please visit:".cyan
-          puts "#{concert_choice.tickets_URL}"
-          puts ""
-          puts "///////////////////////////////////////////////////////////////////////////"
+        # if concert_choice == nil
+        #   puts "Be groovy or type exit to leave, man."
+        #   puts "Please select the concert number you wish to see."
+        # else
+        puts ""
+        puts "///////////////////////////////////////////////////////////////////////////"
+        puts "Red Rocks Park & Amphitheatre is Proud to Present:".red
+        puts ""
+        puts "#{concert_choice.name}".bold
+        puts "#{concert_choice.opener}"
+        puts "On #{concert_choice.date} at #{concert_choice.time}"
+        puts "For tickets and more information, please visit:".cyan
+        puts "#{concert_choice.tickets_URL}"
+        puts ""
+        puts "///////////////////////////////////////////////////////////////////////////"
         end
+      elsif input == "exit"
+        goodbye
       else
         puts "Please try again."
       end
