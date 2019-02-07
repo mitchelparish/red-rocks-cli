@@ -8,7 +8,6 @@ class RedRocks::CLI
     welcome
     list_concerts
     menu
-    goodbye
   end
 
   def welcome
@@ -45,10 +44,6 @@ class RedRocks::CLI
     input = gets.strip
       if input.to_i>0
         concert_choice = RedRocks::Concert.find_by_index(input.to_i - 1)
-        # if concert_choice == nil
-        #   # puts "Be groovy or type exit to leave, man."
-        #   # puts "Please select the concert number you wish to see."
-        # else
           puts ""
           puts "///////////////////////////////////////////////////////////////////////////"
           puts "Red Rocks Park & Amphitheatre is Proud to Present:".red
@@ -60,10 +55,12 @@ class RedRocks::CLI
           puts "#{concert_choice.tickets_URL}"
           puts ""
           puts "///////////////////////////////////////////////////////////////////////////"
+          puts ""
+          puts "To see the list again, type list. To bounce, type exit".bold 
+
       else
         puts "Please try again."
       end
-
     end
 
 
