@@ -12,7 +12,6 @@ class RedRocks::Concert
     @time = time
     @tickets_URL = tickets_URL
     @@all << self
-    #separate save method?
   end
 
   def self.all

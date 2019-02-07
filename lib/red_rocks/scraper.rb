@@ -1,8 +1,3 @@
-# require 'pry' #remove before submission.
-# require 'nokogiri' #remove before submission, already required in environment.
-# require 'open-uri' #remove before submission, already required in environment.
-
-# class RedRocks::Scraper - revert back before submission.
 class RedRocks::Scraper
 
   def self.scrape
@@ -15,9 +10,6 @@ class RedRocks::Scraper
       time = concert.css("span.m-doors").text.gsub("Doors","").strip
       tickets_URL = concert.css("div.buttons a").attr("href").text
       RedRocks::Concert.new(name, opener, date, time, tickets_URL)
-      #binding.pry #remove before submission.
     end
   end
 end
-
-# Scraper.scrape #remove before submission.
