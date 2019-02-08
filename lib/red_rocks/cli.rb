@@ -27,6 +27,7 @@ class RedRocks::CLI
       concerts = RedRocks::Concert.all
       concerts.each.with_index(1) {|concert, index| puts "#{index}. #{concert.name}"}
     elsif input == "exit"
+      system "clear" or system "cls"
       exit
     else
       puts ""
@@ -60,6 +61,7 @@ class RedRocks::CLI
       puts ""
       puts "See ya out there!!".bold
       puts ""
+      system "clear" or system "cls"
     else
       puts "Please try again."
       menu
