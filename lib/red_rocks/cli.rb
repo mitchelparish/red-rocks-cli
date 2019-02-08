@@ -42,7 +42,7 @@ class RedRocks::CLI
     puts "Please select the concert number you wish to see. To bounce, type exit.".red.bold
       input = gets.strip
 
-    if input.to_i>0
+    if input.to_i > 0
       concert_choice = RedRocks::Concert.find_by_index(input.to_i - 1)
       puts ""
       puts "///////////////////////////////////////////////////////////////////////////"
