@@ -1,6 +1,6 @@
 # Red Rocks Amphitheatre CLI
 
-This gem provides the user with a Command Line Interface to access concert information for Red Rocks Park & Amphitheater in Morrison, Colorado.
+This Command Line Interface allows a user to access concert information for Red Rocks Park & Amphitheater in Morrison, Colorado.
 
 Located 10 miles west of Denver, the open-air amphitheater sits at 6,450 feet above sea level and seats 9,525 people. Utilized as a concert venue since 1906, notable perfomers include The Beatles, Jimi Hendrix, and The Grateful Dead.
 
@@ -8,11 +8,11 @@ Located 10 miles west of Denver, the open-air amphitheater sits at 6,450 feet ab
 
 Clone the repository
 
-```cd red-rocks-cli```
+```$ cd red-rocks-cli```
 
 And then execute:
 
-```./bin/red-rocks```
+```$ ./bin/red-rocks```
 
 ## Development
 
