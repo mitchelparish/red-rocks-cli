@@ -4,13 +4,15 @@ This Command Line Interface allows a user to access concert information for Red 
 
 Located 10 miles west of Denver, the open-air amphitheater sits at 6,450 feet above sea level and seats 9,525 people. Utilized as a concert venue since 1906, notable perfomers include The Beatles, Jimi Hendrix, and The Grateful Dead.
 
+This project was completed as part of Flatiron School's Full Stack Web Development course.
+
 ## Installation
 
-Clone the repository
+Clone the repository, then:
 
 ```$ cd red-rocks-cli```
 
-And then execute:
+Then execute:
 
 ```$ ./bin/red-rocks```
 
