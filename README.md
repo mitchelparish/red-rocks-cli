@@ -1,4 +1,4 @@
-# Red Rocks Amphitheatre Data Gem
+# Red Rocks Amphitheatre CLI
 
 This gem provides the user with a Command Line Interface to access concert information for Red Rocks Park & Amphitheater in Morrison, Colorado.
 
@@ -6,25 +6,13 @@ Located 10 miles west of Denver, the open-air amphitheater sits at 6,450 feet ab
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Clone down the repository
 
-```ruby
-gem 'red-rocks-cli'
-```
+```cd red-rocks-cli```
 
 And then execute:
 
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install red-rocks-cli
-
-## Usage
-
-Type the below and follow the on screen prompts.
-
-    $ red-rocks-cli
+```./bin/red-rocks```
 
 ## Development
 
