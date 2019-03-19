@@ -6,7 +6,7 @@ Located 10 miles west of Denver, the open-air amphitheater sits at 6,450 feet ab
 
 ## Installation
 
-Clone down the repository
+Clone the repository
 
 ```cd red-rocks-cli```
 
